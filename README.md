@@ -25,8 +25,8 @@
         }
 
        function draw() {
-        
-          r=random(0,255)
+        //These are the random color valuables and the background randomly change color
+          r=random(0,255)  
           g=random(0,255)
           b=random(0,255)
           background(r,g,b,15) 
@@ -35,19 +35,21 @@
         }
             
         function mouseMoved(){
-         
+         //the eyes (big ones)
           noStroke()
-         fill (r,g,b,opacity)
-         ellipse(mouseX,mouseY,size*scale,size*scale)
-          ellipse(mouseX+80*scale,mouseY,size*scale,size*scale)
-          
-          fill(r-20,g-20,b-20,opacity)
-          ellipse(mouseX,mouseY,(size-60)*scale,(size-60)*scale)
-          ellipse(mouseX+85*scale,mouseY,(size-60)*scale,(size-60)*scale)
-          ellipse(mouseX+40*scale,mouseY+50*scale,(size+30)*scale,(size+10)*scale)
+         fill (r,g,b,opacity)//coolors for the eyes
+         ellipse(mouseX,mouseY,size*scale,size*scale)//left eye
+          ellipse(mouseX+80*scale,mouseY,size*scale,size*scale)//right eye
+          // the eyeballs or pupils (small dots inside of the eyes), and the mouth
+          fill(r-20,g-20,b-20,opacity)//colors for the eyeball and the mouth
+          ellipse(mouseX,mouseY,(size-60)*scale,(size-60)*scale)//left eyeball
+          ellipse(mouseX+85*scale,mouseY,(size-60)*scale,(size-60)*scale)//right eyeball
+          ellipse(mouseX+40*scale,mouseY+50*scale,(size+30)*scale,(size+10)*scale)//mouth
           opacity++
         }
       function keyPressed(){
+        // press the up arrow to increase the size of the eyes and the mouth
+        // press the down arrow to decrase the size of the eyes and the mouth
         if (keyCode == UP_ARROW) {
           scale=scale+0.5;
         }
@@ -66,7 +68,7 @@
 
 <body>
     <div id="code" class="container-fluid">
-        <script src="https://gist-it.appspot.com/github/shuquanh9009/p5js/blob/gh-pages/interaction-project.html?footer=0"></script>
+        <script src="https://gist-it.appspot.com/github/shuquanh9009/p5js/blob/master/interaction-project.html?footer=0"></script>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -76,7 +78,6 @@
         });
     </script>
 </body>
-
 
 
 </html>
